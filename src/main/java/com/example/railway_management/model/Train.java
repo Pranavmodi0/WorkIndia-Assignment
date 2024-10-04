@@ -5,10 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Train {
 
     @Id
@@ -29,4 +27,64 @@ public class Train {
 
     @Column(nullable = false)
     private int availableSeats;
+
+    public Train() {
+    }
+
+    public Train(Long id, String trainNumber, String source, String destination, int totalSeats, int availableSeats) {
+        this.id = id;
+        this.trainNumber = trainNumber;
+        this.source = source;
+        this.destination = destination;
+        this.totalSeats = totalSeats;
+        this.availableSeats = availableSeats;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTrainNumber() {
+        return trainNumber;
+    }
+
+    public void setTrainNumber(String trainNumber) {
+        this.trainNumber = trainNumber;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public int getTotalSeats() {
+        return totalSeats;
+    }
+
+    public void setTotalSeats(int totalSeats) {
+        this.totalSeats = totalSeats;
+    }
+
+    public int getAvailableSeats() {
+        return availableSeats;
+    }
+
+    public void setAvailableSeats(int availableSeats) {
+        this.availableSeats = availableSeats;
+    }
 }
