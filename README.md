@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a RESTful API for a railway management system, similar to the functionalities provided by IRCTC. The API allows users to manage train bookings, check seat availability, and handle user accounts with role-based access control.
+This project is a RESTful API for a railway management system. The API allows users to manage train bookings, check seat availability, and handle user accounts with role-based access control.
 
 ## Technologies Used
 
@@ -10,8 +10,9 @@ This project is a RESTful API for a railway management system, similar to the fu
 - **Spring Boot**: For building the RESTful API.
 - **MySQL**: For the database management system.
 - **Maven**: For dependency management.
-- **Spring Security**: For authentication and authorization.
-- **Swagger**: For API documentation.
+
+## IDE Used
+- Intellj IDE
 
 ## Features
 
@@ -29,3 +30,30 @@ This project is a RESTful API for a railway management system, similar to the fu
    ```bash
    git clone <repository-url>
    cd railway-management-system
+
+2. **Install Dependencies**
+   ```bash
+   mvn install
+
+3. **Configure Database**
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/railway_management
+   spring.datasource.username=<your-username>
+   spring.datasource.password=<your-password>
+
+3. **Run the Application**
+   ```bash
+   mvn spring-boot:run
+
+## Endpoints
+
+- **POST /api/trains/add**: Add a new train (Admin).
+- **GET /api/trains/availability**: Check seat availability between two stations.
+- **POST /api/trains/book**: Book a seat on a train (User).
+- **GET /api/trains/bookings**: Get booking details for a user (User).
+
+
+## Testing
+
+- You can use tools like Postman to test the API endpoints.
+- Ensure you set the Authorization header for secured endpoints.
