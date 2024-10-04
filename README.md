@@ -26,24 +26,21 @@ This project is a RESTful API for a railway management system. The API allows us
 
 ## Setup Instructions
 
+2. **Install SDE**
+   - Intellij / Eclipse or as per your choice
+
 1. **Clone the Repository**
-   ```bash
-   git clone <repository-url>
-   cd railway-management-system
-
-2. **Install Dependencies**
-   ```bash
-   mvn install
-
+   - clone the repository in your sdk
+   
 3. **Configure Database**
+   - You can create you own Mysql DB and change the name of database and username, password
    ```properties
    spring.datasource.url=jdbc:mysql://localhost:3306/railway_management
    spring.datasource.username=<your-username>
    spring.datasource.password=<your-password>
 
 3. **Run the Application**
-   ```bash
-   mvn spring-boot:run
+   - run the application from the main file of the project in IDE
 
 ## Endpoints
 
